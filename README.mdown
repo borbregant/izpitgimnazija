@@ -1,7 +1,7 @@
 Sestavljanje izpitnih pol
 =========================
 
-* [![Predogled](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentation.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/predstavitev1.html) Predogled
+* [![Predogled](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentation.svg)](https://imgur.com/a/PTJGCHb) Predogled
 
 Paket za LaTeX sestavljanje testov matematike na srednjih šolah, ki večino dela postori sam. Vse, kar morate podati, so podatki o izpitu (ime, datum, navodila in učilnico) ter naloge.
 
@@ -20,3 +20,5 @@ pripravite tako verzijo za reševanje na polo kot verzijo za objavo v arhivu.
 * `Oblikuje glavo izpita`
 * `Naračuna procente za meje ocen`
 * `Možno hitro vstavljanje npr. koordinatnega sistema`
+
+Paket je osnovan na https://github.com/ul-fmf/izpit
