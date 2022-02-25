@@ -1,9 +1,7 @@
 %----------------------------------------------------------------------------%
 %                              Ideje za naprej
 %-----------------------------------------------------------------------(fold)
-% - dodatni list (\AtEndDocument)
-% - obrni stran
-% - lomljenje na koncu naloge pri vec nalogah na listu
+% - brez vpisne naj bo default ukaz pz. pobrisi vse kar je v zvezi s tem
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{izpit}[2010/10/06 Izpitne pole]
@@ -13,7 +11,7 @@
 %-----------------------------------------------------------------------(fold)
 
 % Nalozimo pakete, ki ponujajo enostavno programiranje.
-\RequirePackage{ifthen, keyval, xstring}
+\RequirePackage{ifthen, keyval, xstring, calculator}
 
 % Definiramo pomozne ukaze.
 \newcommand{\@ifthen}[2]{\ifthenelse{#1}{#2}{\relax}}
@@ -207,8 +205,8 @@
   \@ifthen{\equal{#1}{P04}}{\nastavi@ucilnico{\@pstiri}{P.04}}
   \@ifthen{\equal{#1}{P05}}{\nastavi@ucilnico{\@pstiri}{P.05}}
   \@ifthen{\equal{#1}{F1}}{\nastavi@ucilnico{\@fena}{F1}}
-  \@ifthen{\equal{#1}{F2}}{\nastavi@ucilnico{\@fdva}{F2}}
-  \@ifthen{\equal{#1}{MFP}}{\nastavi@ucilnico{\@mfp}{MFP}}
+  \@ifthen{\equal{#1}{JEDILNICA}}{\nastavi@ucilnico{\@jedilnica}{JEDILNICA}}
+  \@ifthen{\equal{#1}{RAZRED}}{\nastavi@ucilnico{\@razred}{RAZRED}}
   \@ifthen{\equal{#1}{VFP}}{\nastavi@ucilnico{\@vfp}{VFP}}
   \setboolean{@sedeznired}{true}
 }
@@ -239,7 +237,7 @@
 
 \newcommand{\nastavi@ucilnico}[2]{
   \def\ucilnica@polje{#1}%
-  \def\ucilnica@oznaka{\sedez@oznaka\ (#2)}%
+  \def\ucilnica@oznaka{\sedez@oznaka}%
 }
 
 % Pripravimo spremenljivke, ki bodo shranile lastnosti glave.
@@ -475,162 +473,34 @@
   }
 }
 
-\newcommand{\@dvestoena}{%
+\newcommand{\@jedilnica}{%
   \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4,0) rectangle (4,1);
-    \@sedezi{-1, ..., -6}{-2.5, -1.5, -0.5, 1.5, 2.5}{-3.5, 0.5, 3.5}
-
-    \newcommand{\l@sedez}[2]{
-      \@sedez[xshift = -0.5cm, rotate around = {-30:(-4.5, ##1)}]{##1}{##2}
-    }
-    \newcommand{\d@sedez}[2]{
-      \@sedez[xshift = 0.5cm, rotate around = {30:(4.5, ##1)}]{##1}{##2}
-    }
-    \@sedezi[\l@sedez]{-1, ..., -6}{-6.5, -5.5}{-7.5, -4.5}
-    \@sedezi[\d@sedez]{-1, ..., -6}{6.5, 5.5}{7.5, 4.5}
+    \draw[kateder] (-3.5,-1) rectangle (-1.5,-15);
+    \@sedezi{-1,...,-15}{}{-4}
+    \@sedezi{-1,...,-15}{}{-1}
+    \draw[kateder] (3.5,-1) rectangle (5.5,-15);
+    \@sedezi{-1,...,-15}{}{3}
+    \@sedezi{-1,...,-15}{}{6}
   \end{tikzpicture}%
 }
 
-\newcommand{\@dvestodva}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4.5,0) rectangle (-0.5,1);
-    \@sedezi{-1, ..., -8}{-3, -2}{-4, -1}
-    \@sedezi{-1, ..., -7}{3, 2}{4, 1}
-  \end{tikzpicture}%
-}
 
-\newcommand{\@dvestotri}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4.5,0) rectangle (-0.5,1);
-    \@sedezi{-1, ..., -5}{-3, -1, 2, 4}{-4, -2, 1, 3, 5}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@dvestopet}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4,0) rectangle (4,1);
-    \@sedezi{-1, ..., -7}{-2.5, -1.5, -0.5, 1.5, 2.5}{-3.5, 0.5, 3.5}
-
-    \newcommand{\l@sedez}[2]{
-      \@sedez[xshift = -0.5cm, rotate around = {-30:(-4.5, ##1)}]{##1}{##2}
-    }
-    \newcommand{\d@sedez}[2]{
-      \@sedez[xshift = 0.5cm, rotate around = {30:(4.5, ##1)}]{##1}{##2}
-    }
-    \@sedezi[\l@sedez]{-1, ..., -7}{-6.5, -5.5}{-7.5, -4.5}
-    \@sedezi[\d@sedez]{-1, ..., -7}{6.5, 5.5}{7.5, 4.5}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@tristostiri}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4.5,0) rectangle (-0.5,1);
-    \@sedezi{-1, ..., -5}{-3, -2, 2, 3}{-4, -1, 1, 4}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@tristosest}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4.5,0) rectangle (-0.5,1);
-    \@sedezi{-1}{-3, -1, 1.75, 3.25}{-4, -2, 0.25, 4.75}
-    \@sedezi{-2, -3}{-3, -1, 1, 3, 4}{-4, -2, 0, 2, 5}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@tristodeset}{%
-  \begin{tikzpicture}[ucilnica, rotate = 90, yscale = -1]
-    \draw[kateder] (0, -2.5) rectangle (1, -0.5);
-    \@sedezi{-2, -1}{-2,-4}{-1,-3,-5}
-    \@sedezi{1, 2}{0, -2,-4}{-1,-3,-5}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@tristoenajst}{%
-  \begin{tikzpicture}[ucilnica, rotate = 90, yscale = -1]
-    \draw[kateder] (0, -2.5) rectangle (1, -0.5);
-    \@sedezi{-2, -1}{-1, -3, -5}{-2, -4, -6}
-    \@sedezi{1, 2}{-1, -3, -5}{0, -2, -4, -6}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@tristodvanajst}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-2.5, 0) rectangle (-0.5, 0.55);
-    \@sedezi{-1, ..., -3}{-1, 2}{-2, 1, 3}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@pena}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (3,0) rectangle (6.5,1);
-    \@sedezi{-1, ..., -5}{-5, -3, -1}{-6, -4, -2}
-    \@sedezi{-1, ..., -4}{1, 3, 5}{2, 4, 6}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@pstiri}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (1.5,0) rectangle (4.5,1);
-    \@sedezi{-1, ..., -5}{-3, -2, 2, 3}{-4, -1, 1, 4}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@fena}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-4.3,0.4) rectangle (-2.7,-0.4);
-    \@sedezi{0}{4}{3}
-    \@sedezi{-1,...,-9}{-3,-2}{-4,-1}
-    \@sedezi{-1,...,-8}{2, 4, 6}{1, 3, 5}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@fdva}{%
-  \begin{tikzpicture}[ucilnica]
-    \draw[kateder] (-1,0.4) rectangle (1,-0.4);
-    \@sedezi{-1,-2,-4,-5,-6,-7,-8}{-4.5,-2.5,-0.5,1.5,3.5}{-3.5,-1.5,0.5,2.5,4.5}
-  \end{tikzpicture}%
-}
-
-\newcommand{\@mfp}{%
+\newcommand{\@razred}{%
   \begin{tikzpicture}[ucilnica]
     \draw[kateder] (-5.5,0) rectangle (-2.5,1);
-    \@sedezi{-1,...,-11}{-4, -2}{-5, -3, -1}
-    \@sedezi{-1,...,-6}{2}{1, 3}
-    \@sedezi{-8,...,-11}{2}{1, 3}
+    \@sedezi{-1,-2}{}{-8,-7}
+    \@sedezi{-4,-5}{}{-8,-7}
+    \@sedezi{-7,-8}{}{-8,-7}
+    \@sedezi{-10,-11}{}{-8,-7}
+    \@sedezi{-1,-2}{}{-5,...,-2}
+    \@sedezi{-4,-5}{}{-5,...,-2}
+    \@sedezi{-7,-8}{}{-5,...,-2}
+    \@sedezi{-10,-11}{}{-5,...,-2}
+    \@sedezi{-1,-2}{}{0,1}
+    \@sedezi{-4,-5}{}{0,1}
+    \@sedezi{-7,-8}{}{0,1}
+    \@sedezi{-10,-11}{}{0,1}
   \end{tikzpicture}%
 }
 
-\newcommand{\@vfp}{%
-  \begin{tikzpicture}[rotate = -90, yscale = -\x@velikostucilnice, xscale = \x@velikostucilnice]
-    \pgfmathsetmacro\vrsta{0}
-    \draw[kateder] (6,-4) rectangle (7,4);
-    \foreach \vrsta / \stran / \sredina in {
-      1/4/13, 2/4/14, 3/5/15, 4/5/16, 5/6/17, 6/6/18, 7/7/19, 8/7/20, 9/7/21,
-      10/8/22, 11/8/23, 12/9/23
-    } {
-      \pgfmathsetmacro\radij{10 + \vrsta}
-      \pgfmathsetmacro\dodatnia{\sredina - 3}
-      \pgfmathsetmacro\dodatnib{\sredina - 7}
-      \pgfmathsetmacro\sirina{\sredina / 2}
-      \foreach \stolpec in {1, ..., \stran} {
-        \draw(-35 - 20 / \stran * \stolpec:\radij) node[sedez] {};
-        \draw(35 + 20 / \stran * \stolpec:\radij) node[sedez] {};        
-      }
-      \foreach \stolpec in {1, \stran} {
-        \draw(-35 - 20 / \stran * \stolpec:\radij) node[sedez, dovoljen] {};
-        \draw(35 + 20 / \stran * \stolpec:\radij) node[sedez, dovoljen] {};        
-      }
-      \foreach \stolpec in {1, ..., \sredina}
-        \draw(-30 - 30 / \sredina + 60 / \sredina * \stolpec:\radij) node[sedez] {};
-      \foreach \stolpec in {1, 4, \dodatnia, \sredina}
-        \draw(-30 - 30 / \sredina + 60 / \sredina * \stolpec:\radij) node[sedez, dovoljen] {};
-      \@ifthen{\vrsta > 6}{
-        \foreach \stolpec in {8, \dodatnib}
-          \draw(-30 - 30 / \sredina + 60 / \sredina * \stolpec:\radij) node[sedez, dovoljen] {};
-        \draw(-35 - 20 / \stran * 4:\radij) node[sedez, dovoljen] {};
-        \draw(35 + 20 / \stran * 4:\radij) node[sedez, dovoljen] {};        
-      }
-    }    
-  \end{tikzpicture}
-}
 %------------------------------------------------------------------------(end)
