@@ -2,6 +2,7 @@
 %                              Ideje za naprej
 %-----------------------------------------------------------------------(fold)
 % - brez vpisne naj bo default ukaz pz. pobrisi vse kar je v zvezi s tem
+% - premakni kriterij v sam class z boolejci
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{izpit}[2010/10/06 Izpitne pole]
@@ -124,7 +125,7 @@
 \def\h@sirinaglave{\textwidth}
 \def\h@sirinanaslova{12cm}
 \def\h@sirinaucilnice{3.456cm}
-\def\h@sirinaimena{11cm}
+\def\h@sirinaimena{6cm}
 \def\h@odmiktock{5mm}
 \def\v@predpraznoglavo{5mm}
 \def\v@predpodnaslovom{1mm}

@@ -32,8 +32,7 @@
 %               Sem vpisi podatke o izpitu (ucilnica = RAZRED ali JEDILNICA)
 %==========================================================================
 \izpit[ucilnica = RAZRED, naloge = 3, brez vpisne]%ucilnica RAZRED,JEDILNICA, lahko se sedezni red
-  {Diskretna algebraična analiza: 2. izpit}{11. 12. 2013}{
-  Cas pisanja je 45 minut. Mozno je doseci $\skupnotock$ tock. Veliko uspeha!}
+{Matematika - Polinomi}{30. 9. 2239}{Čas pisanja je 45 minut.\\ Možno je doseči $\skupnotock$ točk.\\ Veliko uspeha!}
   
   
   \begin{flushright}
@@ -56,6 +55,55 @@
 \naloga[\tocke{$\tockeprve$}]
 
 \input{koordinatnisistem}\\
-\input{kompleksnaravnina}
+\dodatek{\input{kompleksnaravnina}}
+
+
+\naloga[\tocke{$\tockedruge$}]
+
+  \podnaloga[15]
+    Poiščite izjavo $X = X(p, q, r)$, ki ima naslednjo pravilnostno tabelo.
+    Izjavo poenostavite do oblike, ki vsebuje kvečjemu dva logična veznika.
+    \[
+      \begin{tabular}{c|cccccccc}
+        $p$ & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+        $q$ & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 \\
+        $r$ & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\\hline
+        $X$ & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\
+      \end{tabular}
+    \]
+  
+  % Ukaz \prostor na polo doda prostor za rešitev. Ukaz sprejme neobvezen
+  % argument, ki pove, kolikšen delež prostora naj bo namenjen nalogi.
+  % Če paket naložite z možnostjo 'arhiv', ukaz \prostor ne naredi ničesar.
+  \prostor[2] % Za to nalogo bo dvakrat toliko prostora kot za naslednjo.
+
+  \podnaloga[5]
+    Naj bo $G$ grupa in $H$ njena podgrupa edinka. Dokažite, da grupa $G$ ni
+    enostavna natanko tedaj, ko ima $H$ polbrata.
+
+  \prostor
+
+\naloga[\tocke{$\tocketretje$}]
+  Skicirajte graf funkcije $f \colon \mathbb{R} \to \mathbb{R}$, podane s
+  predpisom
+  \[
+    f(x) = \frac{1 + x - x^2}{3 x^2 - 5} \;.
+  \]
+
+  % Ukaz \dodatek uporabite, kadar na izpit želite dati sliko, tabelo, ali kaj
+  % podobnega, kar bo študentom v pomoč pri pisanju odgovorov.
+  % Če paket naložite z možnostjo 'arhiv', ukaz \dodatek ne naredi ničesar.
+  \dodatek{\input{koordinatnisistem}}
+
+% Vsaka naslednja naloga gre v osnovi na novo stran. Če želite nalogo dodati
+% na isto stran, uporabite ukaz \naloga*, ki se obnaša enako kot \naloga, le
+% da ne naredi nove strani.
+\naloga*[dodatnih 5 točk]%se ne steje v procente za ocene
+
+  Za katera cela števila $c$ ima diofantska enačba
+  \[
+    72 x + 19 y = c
+  \]
+  rešitve v celih številih? Kakšna je v tem primeru splošna oblika rešitve?
 
 \end{document}
