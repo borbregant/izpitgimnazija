@@ -14,6 +14,14 @@
 % Nalozimo pakete, ki ponujajo enostavno programiranje.
 \RequirePackage{ifthen, keyval, xstring, calculator}
 
+\newcommand\PlaceText[3]{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[outer sep=0pt,inner sep=0pt,anchor=south west] 
+  at ([xshift=#1,yshift=-#2]current page.north west) {#3};
+\end{tikzpicture}%
+}
+
+
 % Definiramo pomozne ukaze.
 \newcommand{\@ifthen}[2]{\ifthenelse{#1}{#2}{\relax}}
 \newcommand{\@unless}[2]{\ifthenelse{#1}{\relax}{#2}}
