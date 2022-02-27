@@ -2,11 +2,11 @@ Sestavljanje izpitnih pol
 =========================
 
 * [![Predogled](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentation.svg)](https://imgur.com/a/PTJGCHb) Predogled
+* [![Predogled](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentation.svg)](https://imgur.com/a/Mrf48sC) Predogled z opcijo `Arhiv`
 
-Paket za LaTeX sestavljanje testov matematike na srednjih šolah, ki večino dela postori sam. Vse, kar morate podati, so podatki o izpitu (ime, datum, navodila in učilnico) ter naloge.
+Paket za LaTeX sestavljanje testov matematike na srednjih šolah, ki večino dela postori sam. Vse, kar morate podati, so podatki o izpitu (ime, datum, navodila, učilnico in število točk) ter naloge.
 
-Paket nato avtomatsko oblikuje glavo izpita, sedežni red, polja za ime in točke ter podobno. Poleg tega vam omogoča, da za vsak izpit
-pripravite tako verzijo za reševanje na polo kot verzijo za objavo v arhivu.
+Paket nato avtomatsko oblikuje glavo izpita, sedežni red, polja za ime in točke ter podobno. Poleg tega vam omogoča, da za vsak izpit pripravite tako verzijo za reševanje na polo kot verzijo za objavo v arhivu.
 
 ## Podatki, ki jih paket sprejme:
 
@@ -20,5 +20,7 @@ pripravite tako verzijo za reševanje na polo kot verzijo za objavo v arhivu.
 * `Oblikuje glavo izpita`
 * `Naračuna procente za meje ocen`
 * `Možno hitro vstavljanje npr. koordinatnega sistema`
+
+## Arhiv: Za natis izpita v opcijo arhiv , v preambulo vzorca vpišite \documentclass[arhiv]{izpit}. Sledeč PDF pa lahko naložite v repozitorij LINK namenjen zbiranju izpitov.
 
 Paket je osnovan na https://github.com/ul-fmf/izpit

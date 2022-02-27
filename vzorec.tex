@@ -1,4 +1,24 @@
 \documentclass{izpit}
+% Paket lahko naložite z neobveznimi možnostmi:
+% - arhiv:
+%     Izpis, namenjen za objavo izpita v arhivu. Naloge se pišejo ena pod
+%     drugo, brez vmesnega prostora za reševanje, v glavi pa ni vpisnih polj.
+% - izpolnjen:
+%     Izpis, namenjen za generirane domače naloge. V glavi ni vpisnih polj,
+%     saj se predpostavlja, da so že izpolnjena (vsak študent ima svojo
+%     verzijo)
+% - brezpaketov:
+%     Prepreči nalaganje paketov amsmath, amssym, babel in inputenc. To
+%     možnost uporabite, če je kakšen od teh paketov v konfliktu z vašimi.
+%     Paketi ifthen, keyval, geometry in tikz se vedno naložijo, saj so
+%     za uporabo paketa izpit obvezni.
+% - sumniki:
+%     Če vaš urejevalnik pod Windowsi ne pozna kodne tabele UTF-8
+%     (ostali operacijski sistemi že leta podpirajo UTF-8),
+%     uporabite možnost sumniki, da boste lahko pisali č namesto "c, ali \v c.
+% - 10pt, 11pt, fleqn, ...
+%     Uporabite lahko tudi vse ostale možnosti ki obstajajo v paketu article.
+%     V osnovi je velikost črk 11pt.
 
 \begin{document}
 
@@ -46,7 +66,7 @@
   
 \naloga[\tocke{25}]
 
-\input{koordinatnisistem}\\
+%\input{koordinatnisistem}\\
 \dodatek{\input{kompleksnaravnina}}
 
 
