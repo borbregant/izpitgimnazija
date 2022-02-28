@@ -1,24 +1,4 @@
 \documentclass{izpit}
-% Paket lahko naložite z neobveznimi možnostmi:
-% - arhiv:
-%     Izpis, namenjen za objavo izpita v arhivu. Naloge se pišejo ena pod
-%     drugo, brez vmesnega prostora za reševanje, v glavi pa ni vpisnih polj.
-% - izpolnjen:
-%     Izpis, namenjen za generirane domače naloge. V glavi ni vpisnih polj,
-%     saj se predpostavlja, da so že izpolnjena (vsak študent ima svojo
-%     verzijo)
-% - brezpaketov:
-%     Prepreči nalaganje paketov amsmath, amssym, babel in inputenc. To
-%     možnost uporabite, če je kakšen od teh paketov v konfliktu z vašimi.
-%     Paketi ifthen, keyval, geometry in tikz se vedno naložijo, saj so
-%     za uporabo paketa izpit obvezni.
-% - sumniki:
-%     Če vaš urejevalnik pod Windowsi ne pozna kodne tabele UTF-8
-%     (ostali operacijski sistemi že leta podpirajo UTF-8),
-%     uporabite možnost sumniki, da boste lahko pisali č namesto "c, ali \v c.
-% - 10pt, 11pt, fleqn, ...
-%     Uporabite lahko tudi vse ostale možnosti ki obstajajo v paketu article.
-%     V osnovi je velikost črk 11pt.
 
 \begin{document}
 
@@ -27,7 +7,7 @@
 %==========================================================================
 \FRACTIONSIMPLIFY{60}{1}{\skupnotock}{\nepomembno}% zal se v paketu ne da enostavneje shraniti
 \MAX{0.1}{0}{\tempepsilon}%shranimo epsilon... ne gre trik z ulomkom zato max
-%\ADD{\skupnotock}{\tockecetrte}{\skupnotock}%ce dodajamo dodatno nalogo
+
 \DIVIDE{\skupnotock}{10}{\sol}
 \MULTIPLY{\sol}{9}{\odlicno}
 \MULTIPLY{\sol}{7.6}{\pravdobro}
@@ -50,7 +30,7 @@
 {Matematika - Polinomi}{30. 9. 2239}{Čas pisanja je 45 minut.\\ Možno je doseči $\skupnotock$ točk.\\ Veliko uspeha!}
 
  %%%%%%%%%%%%%%%%%%%%
- \PlaceText{100mm}{40mm}{\begin{tabular}{ll}
+ \PlaceText{100mm}{38mm}{\begin{tabular}{ll}
     \multicolumn{2}{c}{\textbf{Kriterij ocenjevanja}} \\[0.5ex]
     Ocena & Tocke \\ \hline
     zadostno & $\zadostno - \dobro$ \\
@@ -63,12 +43,8 @@
 %   za dodatek koordinatnega sistema daj pod navodila naloge \input{koordinatnisistem}
 %   oz. za kompleksno ravnino \input{kompleksnaravnina}
 %==========================================================================
-  
-\naloga[\tocke{25}]
 
 %\input{koordinatnisistem}\\
-\dodatek{\input{kompleksnaravnina}}
-
 
 \naloga[\tocke{20}]
 
