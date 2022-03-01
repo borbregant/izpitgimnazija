@@ -16,10 +16,10 @@ Paket lahko naložite z neobveznimi možnostmi s spodnjo sintakso in možnostmi 
 
 * `sumniki` Če vaš urejevalnik pod Windowsi ne pozna kodne tabele UTF-8 (ostali operacijski sistemi že leta podpirajo UTF-8), uporabite možnost sumniki, da boste lahko pisali č namesto "c, ali \v c.
 
-* `10pt, 11pt, fleqn, ...` Če vaš urejevalnik pod Windowsi ne pozna kodne tabele UTF-8 (ostali operacijski sistemi že leta podpirajo UTF-8), uporabite možnost sumniki, da boste lahko pisali č namesto "c, ali \v c. 10pt, 11pt, fleqn, ... Uporabite lahko tudi vse ostale možnosti ki obstajajo v paketu article. V osnovi je velikost črk 11pt.
+* `10pt, 11pt, fleqn, ...` 10pt, 11pt, fleqn, ... Uporabite lahko tudi vse ostale možnosti ki obstajajo v paketu article. V osnovi je velikost črk 11pt.
 
 
-Vsak izpit se začne s spodnjim dokazom, ki sprejme naslednje neobvezne možnosti.
+Vsak izpit se začne s spodnjim ukazom, ki sprejme naslednje neobvezne možnosti.
 
 ```sh
 \izpit[ukaz npr. ucilnica = RAZRED, naloge = 4, brez vpisne]{predmet}{datum}{pravila}.
@@ -30,6 +30,8 @@ Vsak izpit se začne s spodnjim dokazom, ki sprejme naslednje neobvezne možnost
 * `naloge` V glavo izpita se natisnejo okenca za vpis točk posameznih nalog ter skupnega števila točk.
 
 <!---
+
+## Manj pomembne možnosti v paketu
 
 % - sedezni red:
 %     Na shemi učilnice so dovoljeni sedeži odebeljeni.
