@@ -24,23 +24,15 @@ Vsak izpit se začne s spodnjim dokazom, ki sprejme naslednje neobvezne možnost
 ```sh
 \izpit[ukaz npr. ucilnica = RAZRED, naloge = 4, brez vpisne]{predmet}{datum}{pravila}.
 ```
-* `ucilnica` 
 
+* `ucilnica` V glavo izpita se natisne shema učilnice, na kateri lahko dijaki označijo svoj sedež. Na voljo je klasičen RAZRED in JEDILNICA.
 
+* `naloge` V glavo izpita se natisnejo okenca za vpis točk posameznih nalog ter skupnega števila točk.
 
-% - ucilnica:
-%     V glavo izpita se natisne shema učilnice, na kateri študentje lahko
-%     označijo svoj sedež. Na voljo so učilnice: 201, 202, 203, 204, 205,
-%     304, 305, 306, 307, 310, 311, 312, P01, P02, P04, P05, F1, F2, MFP in VFP.
-%     Povejte, katere učilnice bi še potrebovali. Za idejo in pomoč pri izdelavi
-%     se zahvaljujem Alešu Vavpetiču, Jaki Smrekarju in Janošu Vidaliju.
+<!---
+
 % - sedezni red:
 %     Na shemi učilnice so dovoljeni sedeži odebeljeni.
-% - naloge:
-%     V glavo izpita se natisnejo okenca za vpis točk posameznih nalog ter
-%     skupnega števila točk. Če je število nalog enako 0, se natisne samo
-%     okence skupnega števila točk, če pa je negativno, se ne natisne nič. V
-%     osnovi se natisnejo okenca za 4 naloge ter skupne točke.
 % - anglescina:
 %     Če želite izpit sestaviti v angleščini, uporabite parameter
 %     'anglescina'. Prevedena bodo polja za ime, vpisno številko, oznake nalog
@@ -95,3 +87,5 @@ Vsak izpit se začne s spodnjim dokazom, ki sprejme naslednje neobvezne možnost
 %     Ime in priimek (privzeto prazno za ročni vnos).
 % - vpisna stevilka:
 %     Vpisna številka (8 znakov; privzeto prazno za ročni vnos).
+
+-->
