@@ -1,7 +1,6 @@
 %----------------------------------------------------------------------------%
 %                              Ideje za naprej
 %-----------------------------------------------------------------------(fold)
-% - brez vpisne naj bo default ukaz pz. pobrisi vse kar je v zvezi s tem
 % - premakni kriterij v sam class z boolejci
 
 \NeedsTeXFormat{LaTeX2e}
@@ -260,7 +259,7 @@
   \setboolean{@slovenski}{true}%
   \setboolean{@nadaljuj}{false}%
   \setboolean{@sedeznired}{false}%
-  \setboolean{@vpisnastevilka}{true}%
+  \setboolean{@vpisnastevilka}{false}%
   \setkeys{izpit}{#1}%
   \def\@naslov{#2}%
   \def\@podnaslov{#3}%
