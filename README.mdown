@@ -19,4 +19,4 @@ Paket nato avtomatsko oblikuje glavo izpita, sedežni red, polja za ime in točk
 
 ![Navodila](https://github.com/borbregant/izpitgimnazija/blob/main/gitsvg/navodila.png)
 
-<span style="color:red">*Paket je osnovan na* https://github.com/ul-fmf/izpit</span>
+:red_circle: Paket je osnovan na https://github.com/ul-fmf/izpit :red_circle:
