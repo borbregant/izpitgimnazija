@@ -29,65 +29,8 @@ Vsak izpit se začne s spodnjim ukazom, ki sprejme naslednje neobvezne možnosti
 
 * `naloge` V glavo izpita se natisnejo okenca za vpis točk posameznih nalog ter skupnega števila točk.
 
-<!---
-
 ## Manj pomembne možnosti v paketu
 
-% - sedezni red:
-%     Na shemi učilnice so dovoljeni sedeži odebeljeni.
-% - anglescina:
-%     Če želite izpit sestaviti v angleščini, uporabite parameter
-%     'anglescina'. Prevedena bodo polja za ime, vpisno številko, oznake nalog
-%     ter števila točk (če ste uporabili ukaz \tocke{} - glej spodaj).
-% - nadaljuj:
-%     Če izpit obsega več listov, lahko ukaz \izpit ponovimo na novem listu,
-%     da se ponovno izpiše glava. Parameter 'nadaljuj' poskrbi za to, da se
-%     števec nalog ne ponastavi in se tako številčenje nadaljuje na novem listu.
-% - brez vpisne:
-%     Polje za vnos vpisne številke se ne izriše.
-% - pred izpitom:
-%     Navpični prostor pred glavo izpita (privzeto -12mm).
-% - med nalogami:
-%     Navpični prostor med nalogami (privzeto 2em).
-% - med podnalogami:
-%     Navpični prostor med podnalogami (privzeto 0.75em).
-% - za podnalogo:
-%     Vodoravni prostor za glavo podnaloge (privzeto 0.5m).
-% - sirina glave:
-%     Širina glave izpita (privzeto enaka širini besedila).
-% - sirina naslova:
-%     Širina naslova izpita (privzeto 12cm).
-% - sirina ucilnice:
-%     Širina območja s sedežnim redom in poljem za vnos vpisne številke (privzeto 3.456cm).
-% - sirina imena:
-%     dolžina črte za ime (privzeto 11cm).
-% - odmik tock:
-%     Vodoravni prostor pred okencem za vpis točk (privzeto 5mm).
-% - pred prazno glavo:
-%     Navpični prostor pred glavo brez vpisnih polj (pri možnostih arhiv ali izpolnjen, privzeto 5mm).
-% - pred datumom:
-%     Navpični prostor pred datumom (privzeto 1mm).
-% - pred pravili:
-%     Navpični prostor pred pravili (privzeto 2mm).
-% - pred imenom:
-%     Navpični prostor pred črto za ime (privzeto 6mm).
-% - pred vpisno:
-%     Navpični prostor pred poljem za vnos vpisne številke (privzeto 6pt).
-% - visina vpisne:
-%     Višina polja za vnos vpisne številke (privzeto 0.7).
-% - sirina vpisne:
-%     Širina okenca za vpis posamezne cifre vpisne številke (privzeto 0.432).
-% - visina ocene:
-%     Višina okenca za vpis točk (privzeto enako kot visina vpisne).
-% - sirina ocene:
-%     Širina okenca za vpis točk (privzeto enako kot visina vpisne).
-% - velikost ucilnice:
-%     Velikost sedežnega reda (privzeto 0.15).
-% - velikost sedeza:
-%     Premer sedeža (privzeto 3.1pt).
-% - ime in priimek:
-%     Ime in priimek (privzeto prazno za ročni vnos).
-% - vpisna stevilka:
-%     Vpisna številka (8 znakov; privzeto prazno za ročni vnos).
+* `ime in priimek` Sintaksa npr. ime in priimek = Janez Novak; Privzeto prazno za ročni vnos.
 
--->
+* `nadaljuj` Če izpit obsega več listov, lahko ukaz \izpit ponovimo na novem listu, da se ponovno izpiše glava. Parameter 'nadaljuj' poskrbi za to, da se števec nalog ne ponastavi in se tako številčenje nadaljuje na novem listu.

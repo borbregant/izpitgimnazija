@@ -1,8 +1,8 @@
 Sestavljanje izpitnih pol
 =========================
 
-* [![Predogled](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentation.svg)](https://vzorecizpita.tiiny.site/) Predogled
-* [![Predogled](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentation.svg)](https://imgur.com/a/Mrf48sC) Predogled z opcijo `Arhiv`
+* [![Predogled](https://github.com/borbregant/izpitgimnazija/gitsvg/presentation.svg)](https://vzorecizpita.tiiny.site/) Predogled
+* [![Predogled](https://github.com/borbregant/izpitgimnazija/gitsvg/presentation.svg)](https://imgur.com/a/Mrf48sC) Predogled z opcijo `Arhiv`
 * [![Podrobnejša navodila](https://github.com/borbregant/APPR_Bor/blob/master/slike/notebook.svg)](https://github.com/borbregant/izpitgimnazija/blob/main/navodila.mdown) Podrobnejša navodila
 
 Paket za LaTeX sestavljanje testov matematike na srednjih šolah, ki večino dela postori sam. Vse, kar morate podati, so podatki o izpitu (ime, datum, navodila, učilnico in število točk) ter naloge.
