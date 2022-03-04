@@ -3,11 +3,15 @@
 \begin{document}
 
 %==========================================================================
-%               Sem vpisi stevila tock in bo latex naracunal procente
+%               Sem vpisi podatke o izpitu (ucilnica = RAZRED) .... dodaj da bo razred default
 %==========================================================================
-\FRACTIONSIMPLIFY{60}{1}{\skupnotock}{\nepomembno}% zal se v paketu ne da enostavneje shraniti
+\FRACTIONSIMPLIFY{60}{1}{\skupnotock}{\nepomembno}%Sem vpiši (v polje trenutno {60}) skupno število točk, da paket naračuna kriterij ocenjevanj
+\izpit[ucilnica = RAZRED, naloge = 3]%ucilnica RAZRED, lahko se sedezni red, ime in priimek
+{Matematika - Polinomi}{30. 9. 2239}{Čas pisanja je 45 minut.\\ Možno je doseči $\skupnotock$ točk.\\ Veliko uspeha!}
+%==========================================================================
+%               Nepomembno - Preskoči
+%==========================================================================
 \MAX{0.1}{0}{\tempepsilon}%shranimo epsilon... ne gre trik z ulomkom zato max
-
 \DIVIDE{\skupnotock}{10}{\sol}
 \MULTIPLY{\sol}{9}{\odlicno}
 \MULTIPLY{\sol}{7.6}{\pravdobro}
@@ -23,13 +27,6 @@
 \ROUND[1]{\dobro}{\dobro}
 \ROUND[1]{\pravdobro}{\pravdobro}
 \ROUND[1]{\odlicno}{\odlicno}
-%==========================================================================
-%               Sem vpisi podatke o izpitu (ucilnica = RAZRED ali JEDILNICA)
-%==========================================================================
-\izpit[ucilnica = RAZRED, naloge = 3]%ucilnica RAZRED, lahko se sedezni red, ime in priimek
-{Matematika - Polinomi}{30. 9. 2239}{Čas pisanja je 45 minut.\\ Možno je doseči $\skupnotock$ točk.\\ Veliko uspeha!}
-
- %%%%%%%%%%%%%%%%%%%%
  \PlaceText{100mm}{36mm}{\begin{tabular}{ll}
     \multicolumn{2}{c}{\textbf{Kriterij ocenjevanja}} \\[0.5ex]
     Ocena & Tocke \\ \hline
