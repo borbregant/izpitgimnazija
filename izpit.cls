@@ -1,7 +1,6 @@
 %----------------------------------------------------------------------------%
 %                              Ideje za naprej
 %-----------------------------------------------------------------------(fold)
-% - premakni kriterij v sam class z boolejci
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{izpit}[2010/10/06 Izpitne pole]
