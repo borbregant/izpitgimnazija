@@ -196,26 +196,8 @@
 \define@key{izpit}{sedezni red}[true]{\tikzstyle{dovoljen} = [fill=black!20]}
 \define@key{izpit}{naloge}[4]{\def\stevilo@nalog{#1}}
 \define@key{izpit}{ucilnica}{
-  \@ifthen{\equal{#1}{201}}{\nastavi@ucilnico{\@dvestoena}{2.01}}
-  \@ifthen{\equal{#1}{202}}{\nastavi@ucilnico{\@dvestodva}{2.02}}
-  \@ifthen{\equal{#1}{203}}{\nastavi@ucilnico{\@dvestotri}{2.03}}
-  \@ifthen{\equal{#1}{204}}{\nastavi@ucilnico{\@dvestotri}{2.04}}
-  \@ifthen{\equal{#1}{205}}{\nastavi@ucilnico{\@dvestopet}{2.05}}
-  \@ifthen{\equal{#1}{304}}{\nastavi@ucilnico{\@tristostiri}{3.04}}
-  \@ifthen{\equal{#1}{305}}{\nastavi@ucilnico{\@tristostiri}{3.05}}
-  \@ifthen{\equal{#1}{306}}{\nastavi@ucilnico{\@tristosest}{3.06}}
-  \@ifthen{\equal{#1}{307}}{\nastavi@ucilnico{\@tristosest}{3.07}}
-  \@ifthen{\equal{#1}{310}}{\nastavi@ucilnico{\@tristodeset}{3.10}}
-  \@ifthen{\equal{#1}{311}}{\nastavi@ucilnico{\@tristoenajst}{3.11}}
-  \@ifthen{\equal{#1}{312}}{\nastavi@ucilnico{\@tristodvanajst}{3.12}}
-  \@ifthen{\equal{#1}{P01}}{\nastavi@ucilnico{\@pena}{P.01}}
-  \@ifthen{\equal{#1}{P02}}{\nastavi@ucilnico{\@dvestodva}{P.02}}
-  \@ifthen{\equal{#1}{P04}}{\nastavi@ucilnico{\@pstiri}{P.04}}
-  \@ifthen{\equal{#1}{P05}}{\nastavi@ucilnico{\@pstiri}{P.05}}
-  \@ifthen{\equal{#1}{F1}}{\nastavi@ucilnico{\@fena}{F1}}
   \@ifthen{\equal{#1}{JEDILNICA}}{\nastavi@ucilnico{\@jedilnica}{JEDILNICA}}
   \@ifthen{\equal{#1}{RAZRED}}{\nastavi@ucilnico{\@razred}{RAZRED}}
-  \@ifthen{\equal{#1}{VFP}}{\nastavi@ucilnico{\@vfp}{VFP}}
   \setboolean{@sedeznired}{true}
 }
 

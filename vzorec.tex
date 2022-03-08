@@ -3,7 +3,7 @@
 \begin{document}
 
 %==========================================================================
-%               Sem vpisi podatke o izpitu (ucilnica = RAZRED) .... dodaj da bo razred default
+%               Sem vpisi podatke o izpitu
 %==========================================================================
 \FRACTIONSIMPLIFY{60}{1}{\skupnotock}{\nepomembno}%Sem vpiši (v polje trenutno {60}) skupno število točk, da paket naračuna kriterij ocenjevanj
 \izpit[ucilnica = RAZRED, naloge = 3]%ucilnica RAZRED, lahko se sedezni red, ime in priimek
@@ -37,11 +37,9 @@
   \end{tabular}}
 %==========================================================================
 %               Sem vpisi naloge
-%   za dodatek koordinatnega sistema daj pod navodila naloge \input{koordinatnisistem}
+%   za dodatek koordinatnega sistema daj pod navodila naloge \dotatek{input{koordinatnisistem}}
 %   oz. za kompleksno ravnino \input{kompleksnaravnina}
 %==========================================================================
-
-%\input{koordinatnisistem}\\
 
 \naloga[\tocke{20}]
 
@@ -78,7 +76,7 @@
   % Ukaz \dodatek uporabite, kadar na izpit želite dati sliko, tabelo, ali kaj
   % podobnega, kar bo študentom v pomoč pri pisanju odgovorov.
   % Če paket naložite z možnostjo 'arhiv', ukaz \dodatek ne naredi ničesar.
-  \dodatek{\input{koordinatnisistem}}
+  \dodatek{\input{kompleksnaravnina}}
 
 % Vsaka naslednja naloga gre v osnovi na novo stran. Če želite nalogo dodati
 % na isto stran, uporabite ukaz \naloga*, ki se obnaša enako kot \naloga, le
