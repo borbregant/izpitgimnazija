@@ -63,6 +63,8 @@
 \newboolean{@sedeznired}          % Ali naj bo sedezni red natisnjen?
 \newboolean{@vpisnastevilka}      % Ali naj se prikaze polje za vpisno stevilko?
 
+\newboolean{@maturitetni}         % Naj se natisne izpit s formulami mature?
+
 %------------------------------------------------------------------------(end)
 %                                   Opcije
 %-----------------------------------------------------------------------(fold)
@@ -70,6 +72,7 @@
 % V osnovi imamo celostranske naloge in vpisna polja
 \setboolean{@celostranske}{true}
 \setboolean{@vpisnapolja}{true}
+\setboolean{@maturitetni}{false}
 % arhiv: naloge ena pod drugo in brez vpisnih polj
 \DeclareOption{arhiv}{
   \setboolean{@celostranske}{false}
@@ -193,6 +196,7 @@
 \define@key{izpit}{anglescina}[true]{\setboolean{@slovenski}{false}}
 \define@key{izpit}{nadaljuj}[true]{\setboolean{@nadaljuj}{true}}
 \define@key{izpit}{brez vpisne}[true]{\setboolean{@vpisnastevilka}{false}}
+\define@key{izpit}{maturitetni}[true]{\setboolean{@maturitetni}{true}}
 \define@key{izpit}{sedezni red}[true]{\tikzstyle{dovoljen} = [fill=black!20]}
 \define@key{izpit}{naloge}[4]{\def\stevilo@nalog{#1}}
 \define@key{izpit}{ucilnica}{
@@ -329,8 +333,16 @@
   \addvspace{\v@mednalogami}
   \@afterindentfalse%
   \@afterheading%
-}
 
+\ifthenelse{\boolean{@maturitetni}}{%
+	\vskip \v@predimenom
+	\textbf{Formule}\\
+	$a^n+b^b=()$, če je $n$ liho naravno število\\
+	$a^n+b^b=()$, če je $n \in \mathbb{N}$\\
+	Evklidov in višinski izrek v pravokotnem trikotniku: $a^2=ca_1$, $b^2=cb_1$, $v_c^2=a_1b_1$
+	}
+
+}
 
 %------------------------------------------------------------------------(end)
 %                             Oblikovanje nalog
