@@ -6,7 +6,7 @@
 %               Sem vpisi podatke o izpitu
 %==========================================================================
 \FRACTIONSIMPLIFY{60}{1}{\skupnotock}{\nepomembno}%Sem vpiši (v polje trenutno {60}) skupno število točk, da paket naračuna kriterij ocenjevanj
-\izpit[ucilnica = RAZRED, naloge = 3, maturitetni]%ucilnica RAZRED, lahko se sedezni red, ime in priimek
+\izpit[ucilnica = RAZRED, naloge = 3, maturitetni]%ucilnica RAZRED, lahko se sedezni red, ime in priimek, maturitetni
 {Matematika - Polinomi}{30. 9. 2239}{Čas pisanja je 45 minut.\\ Možno je doseči $\skupnotock$ točk.\\ Veliko uspeha!}
 %==========================================================================
 %               Nepomembno - Preskoči
@@ -17,30 +17,44 @@
 \MULTIPLY{\sol}{7.6}{\pravdobro}
 \MULTIPLY{\sol}{6.3}{\dobro}
 \MULTIPLY{\sol}{5}{\zadostno}
-\ADD{\dobro}{\tempepsilon}{\dobroplus}%dodajanje epsilonov v spodnje meje
+\ADD{\dobro}{\tempepsilon}{\dobroplus}
 \ADD{\pravdobro}{\tempepsilon}{\pravdobroplus}
 \ADD{\odlicno}{\tempepsilon}{\odlicnoplus}
-\ROUND[1]{\dobroplus}{\dobroplus}%zaokrozevanje
+\ROUND[1]{\dobroplus}{\dobroplus}
 \ROUND[1]{\pravdobroplus}{\pravdobroplus}
 \ROUND[1]{\odlicnoplus}{\odlicnoplus}
 \ROUND[1]{\zadostno}{\zadostno}
 \ROUND[1]{\dobro}{\dobro}
 \ROUND[1]{\pravdobro}{\pravdobro}
-\ROUND[1]{\odlicno}{\odlicno}
- \PlaceText{100mm}{36mm}{\begin{tabular}{ll}
+\ROUND[1]{\odlicno}{\odlicno}\begin{small}
+ \PlaceText{100mm}{33mm}{\begin{tabular}{ll}
     \multicolumn{2}{c}{\textbf{Kriterij ocenjevanja}} \\[0.5ex]
     Ocena & Tocke \\ \hline
     zadostno & $\zadostno - \dobro$ \\
     dobro & $\dobroplus - \pravdobro$ \\
     prav dobro & $\pravdobroplus - \odlicno$ \\
     odlicno & $\odlicnoplus$--
-  \end{tabular}}
+  \end{tabular}}\end{small}
+ \ifthenelse{\boolean{@maturitetni}}{\newpage}%TO JE ZELO GRDA KODA a ker ne gre kriterij v class ni druge moznosti
 %==========================================================================
 %               Sem vpisi naloge
-%   za dodatek koordinatnega sistema daj pod navodila naloge \dotatek{input{koordinatnisistem}}
-%   oz. za kompleksno ravnino \input{kompleksnaravnina}
+%   za dodatek koordinatnega sistema daj pod navodila naloge \dodatek{\input{koordinatnisistem}}
+%   oz. za kompleksno ravnino \dodatek\input{kompleksnaravnina}
 %==========================================================================
 
+\naloga[\tocke{16}]
+  Skicirajte graf funkcije $f \colon \mathbb{R} \to \mathbb{R}$, podane s
+  predpisom
+  \[
+    f(x) = \frac{1 + x - x^2}{3 x^2 - 5} \;.
+  \]
+
+  % Ukaz \dodatek uporabite, kadar na izpit želite dati sliko, tabelo, ali kaj
+  % podobnega, kar bo študentom v pomoč pri pisanju odgovorov.
+  % Če paket naložite z možnostjo 'arhiv', ukaz \dodatek ne naredi ničesar.
+  \dodatek{\input{kompleksnaravnina}}
+  
+  
 \naloga[\tocke{20}]
   \podnaloga[15]
   
@@ -64,18 +78,6 @@
       \end{tabular}
     \]
   \prostor
-
-\naloga[\tocke{16}]
-  Skicirajte graf funkcije $f \colon \mathbb{R} \to \mathbb{R}$, podane s
-  predpisom
-  \[
-    f(x) = \frac{1 + x - x^2}{3 x^2 - 5} \;.
-  \]
-
-  % Ukaz \dodatek uporabite, kadar na izpit želite dati sliko, tabelo, ali kaj
-  % podobnega, kar bo študentom v pomoč pri pisanju odgovorov.
-  % Če paket naložite z možnostjo 'arhiv', ukaz \dodatek ne naredi ničesar.
-  \dodatek{\input{kompleksnaravnina}}
 
 % Vsaka naslednja naloga gre v osnovi na novo stran. Če želite nalogo dodati
 % na isto stran, uporabite ukaz \naloga*, ki se obnaša enako kot \naloga, le

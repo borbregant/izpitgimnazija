@@ -29,6 +29,8 @@ Vsak izpit se začne s spodnjim ukazom, ki sprejme naslednje neobvezne možnosti
 
 * `naloge` V glavo izpita se natisnejo okenca za vpis točk posameznih nalog ter skupnega števila točk.
 
+* `maturitetni` V glavo izpita se natisnejo formule dovoljene na splošni maturi. Glavi izpita nato sledi prazna stran.
+
 ## Manj pomembne možnosti v paketu
 
 * `ime in priimek` Sintaksa npr. ime in priimek = Janez Novak; Privzeto prazno za ročni vnos.

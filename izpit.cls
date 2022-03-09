@@ -336,10 +336,13 @@
 
 \ifthenelse{\boolean{@maturitetni}}{%
 	\vskip \v@predimenom
+	\begin{small}
 	\textbf{Formule}\\
 	$a^n+b^b=()$, če je $n$ liho naravno število\\
 	$a^n+b^b=()$, če je $n \in \mathbb{N}$\\
-	Evklidov in višinski izrek v pravokotnem trikotniku: $a^2=ca_1$, $b^2=cb_1$, $v_c^2=a_1b_1$
+	Evklidov in višinski izrek v pravokotnem trikotniku: $a^2=ca_1$, $b^2=cb_1$, $v_c^2=a_1b_1$\\
+	$\ldots$
+	\end{small}
 	}
 
 }
