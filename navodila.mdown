@@ -36,3 +36,7 @@ Vsak izpit se začne s spodnjim ukazom, ki sprejme naslednje neobvezne možnosti
 * `ime in priimek` Sintaksa npr. ime in priimek = Janez Novak; Privzeto prazno za ročni vnos.
 
 * `nadaljuj` Če izpit obsega več listov, lahko ukaz \izpit ponovimo na novem listu, da se ponovno izpiše glava. Parameter 'nadaljuj' poskrbi za to, da se števec nalog ne ponastavi in se tako številčenje nadaljuje na novem listu.
+
+### Risanje grafov
+
+* Paket vsebuje tudi nekaj možnosti za risanje grafov. Vgrajeni sta ravnina in kompleksna ravina, ki ju dodamo z ```\dodatek{\input{koordinatni sistem oziroma kompleksnaravnina}}```. \dodatek uporabimo, ko nočemo, da se diagram nariše v datoteki za arhiv. Poleg tega lahko uporabnik riše funkcije z vgrajeno knjižnico [Pgfplots](https://www.overleaf.com/learn/latex/Pgfplots_package).
