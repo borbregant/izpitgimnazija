@@ -109,6 +109,7 @@
 }
 \RequirePackage{geometry}
 \RequirePackage{tikz}
+\RequirePackage{pgfplots}
 
 %------------------------------------------------------------------------(end)
 %                                Dimenzije
