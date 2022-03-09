@@ -1,9 +1,9 @@
 \[\begin{tikzpicture}
 
-\begin{axis}[axis lines = left,xlabel = \(x\),ylabel = {\(f(x)\)}]%nastavimo parametri kakšen bo sam koordinatni sistem
+\begin{axis}[axis lines = left,xlabel = \(x\),ylabel = {\(f(x)\)}, grid = both]%nastavimo parametre kakšen bo sam koordinatni sistem
 
 %Eksponentna funkcija
-\addplot [domain=-10:5, samples=100, color=red]{e^x};%domena
+\addplot [domain=-10:5, samples=100, color=red]{e^x};
 \addlegendentry{\(e^x\)} %doda opis funkcij
 
 
@@ -13,8 +13,8 @@
 %dodamo točke na paraboli
 \addplot[color=blue, mark=square] coordinates {(-5,16)};\addlegendentry{Točka {(-5,16)}}
     
-%Parabola
-%\addplot[domain=0:2*pi]{sin(deg(x)}
+%za dodajanje trigonometričnih funkcij
+%\addplot[domain=-1:3,samples=50,smooth,red] {cos(deg(pi*x))};
 
 
 \end{axis}
