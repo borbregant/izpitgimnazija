@@ -338,10 +338,34 @@
 	\vskip \v@predimenom
 	\begin{small}
 	\textbf{Formule}\\
-	$a^n+b^b=()$, če je $n$ liho naravno število\\
-	$a^n+b^b=()$, če je $n \in \mathbb{N}$\\
+	$a^n+b^n=(a+b)(a^{n-1}-a^{n-2}b+ \ldots -ab^{n-2}+b^{n-1})$, če je $n$ liho naravno število\\
+	$a^n+b^n=(a-b)(a^{n-1}+a^{n-2}b+ \ldots +ab^{n-2}+b^{n-1})$, če je $n \in \mathbb{N}$\\
 	Evklidov in višinski izrek v pravokotnem trikotniku: $a^2=ca_1$, $b^2=cb_1$, $v_c^2=a_1b_1$\\
-	$\ldots$
+	Polmer trikotniku očrtanega in včrtanega kroga: $R=\frac{abc}{4S}$, $r=\frac{S}{s}$, $s=\frac{a+b+c}{2}$\\
+	Kotne funkcije polovičnih kotov:\\
+	$\sin \frac{x}{2}=\pm \sqrt{\frac{a-\cos x}{2}}$, $\cos \frac{x}{2}=\pm \sqrt{\frac{1+\cos x}{2}}$, $\tan \frac{x}{2}=\frac{\sin x}{1+\cos x}$\\
+	Adicijski izreki:\\
+	$\sin(x+y)=\sin x\cos y+\cos x\sin y$\\
+	$\cos(x+y)=\cos x \cos y -\sin x \sin y$\\
+	$\tan(x+y)=\frac{\tan x+\tan y}{1-\tan x\tan y}$\\
+	Faktorizacija:\\
+	$\sin x+\sin y=2\sin\frac{x+y}{2}\cos\frac{x-y}{2}$, $\sin x - \sin y =2\cos \frac{x+y}{2}\sin \frac{x-y}{2}$\\
+	$\cos x + \cos y = 2 \cos \frac{x+y}{2}\cos \frac{x-y}{2}$, $\cos x -\cos y = -2 \sin \frac{x+y}{2}\sin \frac{x-y}{2}$\\
+	$\tan x \pm \tan y = \frac{\sin(x\pm y)}{\cos x \cos y}$\\
+	Razčlenitev produkta kotnih funkcij:\\
+	$\sin x \sin y = -\frac{1}{2}[\cos(x+y)-\cos(x-y)]$\\
+	$\cos x \cos y = \frac{1}{2}[\cos(x+y)+\cos(x-y)]$\\
+	$\sin x \cos y = \frac{1}{2}[\sin(x+y)+\sin(x-y)]$\\
+	Razdalja točke $T(x_0,y_0)$ do premice $p: ax+by-c=0$:\\
+	$d(T_0,p)=|\frac{ax_0+by_0-c}{\sqrt{a^2+b^2}}|$\\
+	Ploščina trikotnika z oglišči $A(x_1,y_1), B(x_2,y_2),C(x_3,y_3)$:\\
+	$S= \frac{1}{2}|(x_2-x_1)(y_3-y_1)-(x_3-x_1)(y_2-y_1)|$\\
+	Elipsa: $e^2=a^2-b^2, \varepsilon = \frac{e}{a}, a>b$\\
+	Hiperbola: $e^2=a^2+b^2, \varepsilon = \frac{e}{a}$. $a$ je realna polos\\
+	Parabola: $y^2=2px$, gorišče $G(\frac{p}{2},0)$\\
+	Kompozitum funkcij: $(g \circ f)(x)=g(f(x))$\\
+	Bernoullijeva formula: $P(n,p,k)=\binom{n}{k}p^k(1-p)^{n-k}$\\
+	Integral: $\int \frac{dx}{x^2+a^2}=\frac{1}{a} \arctan \frac{x}{a}+C$\\
 	\end{small}
 	}
 
