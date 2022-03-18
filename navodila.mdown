@@ -22,7 +22,7 @@ Paket lahko naložite z neobveznimi možnostmi s spodnjo sintakso in možnostmi 
 Vsak izpit se začne s spodnjim ukazom, ki sprejme naslednje neobvezne možnosti.
 
 ```sh
-\izpit[ukaz npr. ucilnica = RAZRED, naloge = 4, brez vpisne]{predmet}{datum}{pravila}.
+\izpit[ukaz npr. ucilnica = RAZRED, naloge = 4]{predmet}{datum}{pravila}.
 ```
 
 * `ucilnica` V glavo izpita se natisne shema učilnice, na kateri lahko dijaki označijo svoj sedež. Na voljo je klasičen RAZRED in JEDILNICA.
