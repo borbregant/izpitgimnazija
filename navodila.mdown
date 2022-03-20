@@ -29,7 +29,7 @@ Vsak izpit se začne s spodnjim ukazom, ki sprejme naslednje neobvezne možnosti
 
 * `naloge` V glavo izpita se natisnejo okenca za vpis točk posameznih nalog ter skupnega števila točk.
 
-* `maturitetni` V glavo izpita se natisnejo formule dovoljene na splošni maturi. Glavi izpita nato sledi prazna stran.
+* `maturitetni` V glavo izpita se natisnejo formule dovoljene na splošni maturi. Glavi izpita nato sledi prazna stran. V kolikor želimo maturitetni izpit shraniti v arhiv, moramo za izbrisati opcijo maturitetni in dodati opcijo arhiv (le tako se lahko znebimo formul in začetka z novo stranjo).
 
 ## Manj pomembne možnosti v paketu
 
