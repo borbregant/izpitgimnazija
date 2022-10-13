@@ -202,6 +202,8 @@
 \define@key{izpit}{ucilnica}{
   \@ifthen{\equal{#1}{JEDILNICA}}{\nastavi@ucilnico{\@jedilnica}{JEDILNICA}}
   \@ifthen{\equal{#1}{RAZRED}}{\nastavi@ucilnico{\@razred}{RAZRED}}
+\@ifthen{\equal{#1}{KRIZANKE}}{\nastavi@ucilnico{\@krizanke}{KRIZANKE}}
+  \@ifthen{\equal{#1}{ROSKA}}{\nastavi@ucilnico{\@roska}{ROSKA}}
   \setboolean{@sedeznired}{true}
 }
 
@@ -529,6 +531,22 @@
     \@sedezi{-4,-5}{}{0,1}
     \@sedezi{-7,-8}{}{0,1}
     \@sedezi{-10,-11}{}{0,1}
+  \end{tikzpicture}%
+}
+
+\newcommand{\@roska}{%
+  \begin{tikzpicture}[ucilnica]
+    \draw[kateder] (-5.5,0) rectangle (-2.5,1);
+    \@sedezi{-1,-3,-5,-7,-9,-11}{}{-8,...,-5}
+    \@sedezi{-1,-3,-5,-7,-9,-11}{}{-3,...,0}
+  \end{tikzpicture}%
+}
+
+\newcommand{\@krizanke}{%
+  \begin{tikzpicture}[ucilnica]
+    \draw[kateder] (-5.5,0) rectangle (-2.5,1);
+    \@sedezi{-1,-2,-3,-4,-5,-6,-7}{}{-8,-7}
+    \@sedezi{-1,-2,-3,-4,-5,-6,-7}{}{-4,...,-1}
   \end{tikzpicture}%
 }
 
