@@ -15,6 +15,7 @@ Paket nato avtomatsko oblikuje glavo izpita, sedežni red, polja za ime in točk
 * `Oblikuje glavo izpita`
 * `Naračuna procente za meje ocen`
 * `Možno hitro vstavljanje npr. koordinatnega sistema`
+* `Dostop do nabora nalog (vabljeni k sodelovanju) in enostavna implementacija za nadgradnjo`
 
 ## Navodila za instalacijo:
 
