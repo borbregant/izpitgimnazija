@@ -113,6 +113,8 @@
 \RequirePackage{geometry}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
+\RequirePackage{float}
+\RequirePackage[gen]{eurosym}
 
 %------------------------------------------------------------------------(end)
 %                                Dimenzije

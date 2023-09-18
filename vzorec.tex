@@ -11,7 +11,7 @@
 %==========================================================================
 %               Nepomembno - Preskoči
 %==========================================================================
-\MAX{0.1}{0}{\tempepsilon}%shranimo epsilon... ne gre trik z ulomkom zato max
+\MAX{0.1}{0}{\tempepsilon}%shranimo epsilon... ne gre trik z ulomkom zato max... Ce hoces manjse tocke pod round namesto 0 piši 1
 \MULTIPLY{\skupnotock}{0.9}{\odlicno}
 \MULTIPLY{\skupnotock}{0.76}{\pravdobro}
 \MULTIPLY{\skupnotock}{0.63}{\dobro}
@@ -19,13 +19,13 @@
 \ADD{\dobro}{\tempepsilon}{\dobroplus}
 \ADD{\pravdobro}{\tempepsilon}{\pravdobroplus}
 \ADD{\odlicno}{\tempepsilon}{\odlicnoplus}
-\ROUND[1]{\dobroplus}{\dobroplus}
-\ROUND[1]{\pravdobroplus}{\pravdobroplus}
-\ROUND[1]{\odlicnoplus}{\odlicnoplus}
-\ROUND[1]{\zadostno}{\zadostno}
-\ROUND[1]{\dobro}{\dobro}
-\ROUND[1]{\pravdobro}{\pravdobro}
-\ROUND[1]{\odlicno}{\odlicno}\begin{small}
+\ROUND[0]{\dobroplus}{\dobroplus}
+\ROUND[0]{\pravdobroplus}{\pravdobroplus}
+\ROUND[0]{\odlicnoplus}{\odlicnoplus}
+\ROUND[0]{\zadostno}{\zadostno}
+\ROUND[0]{\dobro}{\dobro}
+\ROUND[0]{\pravdobro}{\pravdobro}
+\ROUND[0]{\odlicno}{\odlicno}\begin{small}
  \PlaceText{100mm}{33mm}{\begin{tabular}{ll}
     \multicolumn{2}{c}{\textbf{Kriterij ocenjevanja}} \\[0.5ex]
     Ocena & Tocke \\ \hline
